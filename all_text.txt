@@ -1,0 +1,3 @@
+npm install react-router-dom
+download tailwindf from its website
+npm install firebase
