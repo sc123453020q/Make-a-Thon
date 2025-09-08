@@ -1,25 +1,26 @@
 // src/pages/Homepage.jsx
 import React from "react";
 import firebase from "firebase/compat/app";
+import logo2 from "../assets/logo2.png";
 export default function Homepage() {
   return (
-    <main className="pt-20">
+    <main className="pt-0.5">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-50 to-white py-16">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
           {/* Left */}
           <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-              Learn from India’s Top Educators
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+              Learn Exciting Concepts in a Gamefied Manner
             </h1>
             <p className="mt-4 text-lg text-gray-600">
               Physics Wallah brings affordable and quality education to every student.
             </p>
             <div className="mt-6 flex space-x-4">
-              <button className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">
-                Explore Courses
+              <button className="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700">
+                Explore Games
               </button>
-              <button className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
+              <button className="px-6 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-blue-50">
                 Download App
               </button>
             </div>
@@ -35,14 +36,14 @@ export default function Homepage() {
       {/* Courses Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Popular Courses</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Popular Games </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((course) => (
               <div key={course} className="bg-white border rounded-lg shadow hover:shadow-lg transition p-6">
-                <img src={`/course-${course}.png`} alt="Course" className="rounded-md mb-4" />
-                <h3 className="font-semibold text-lg text-gray-800">Course Title {course}</h3>
+                <img src={`/course-${course}.png`} alt="Games" className="rounded-md mb-4" />
+                <h3 className="font-semibold text-lg text-gray-800">Game Name {course}</h3>
                 <p className="text-gray-600 mt-2">Brief description of the course and its benefits.</p>
-                <button className="mt-4 text-blue-600 hover:underline">ⓘLearn More</button>
+                <button className="mt-4 text-green-600 hover:underline">ⓘLearn More</button>
               </div>
             ))}
           </div>
@@ -58,7 +59,7 @@ export default function Homepage() {
             { number: "10", label: "Courses" },
           ].map((stat, i) => (
             <div key={i}>
-              <h3 className="text-4xl font-bold text-blue-600">{stat.number}</h3>
+              <h3 className="text-4xl font-bold text-green-600">{stat.number}</h3>
               <p className="text-gray-700 mt-2">{stat.label}</p>
             </div>
           ))}
@@ -93,7 +94,7 @@ export default function Homepage() {
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <img src="/logo-white.png" alt="Logo" className="h-8 mb-4" />
+            <img src={logo2} alt="Logo" className="h-15 mb-4" />
             <p>Affordable & quality education for all.</p>
           </div>
           <div>
